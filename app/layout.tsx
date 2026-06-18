@@ -3,7 +3,17 @@ import { Inter, Space_Grotesk, Space_Mono } from 'next/font/google';
 import { Nav } from '@/src/components/Nav';
 import { Footer } from '@/src/components/Footer';
 import { SITE } from '@/src/data/about';
+import { GITHUB_URL, LINKEDIN_URL } from '@/src/data/links';
 import '@/src/theme.css';
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: SITE.name,
+  jobTitle: SITE.role,
+  url: SITE.url,
+  sameAs: [GITHUB_URL, LINKEDIN_URL],
+};
 
 // Self-hosted at build time, no external font request at runtime, which keeps
 // the site fully static and fast on GitHub Pages.
@@ -61,6 +71,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${spaceMono.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Nav />
         {children}
         <Footer />

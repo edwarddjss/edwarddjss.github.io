@@ -10,7 +10,7 @@ export function ShowcaseGrid({ projects }: { projects: readonly Project[] }) {
 
           <div className="tile-visual">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="tile-media" src={p.thumb} alt={`${p.name} preview`} data-fit={p.fit ?? 'cover'} loading="lazy" />
+            <img className="tile-media" src={p.thumb} alt={`${p.name}, ${p.tag}: ${p.description}`} data-fit={p.fit ?? 'cover'} loading="lazy" />
           </div>
 
           <div className="tile-content">
