@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter, Space_Grotesk, Space_Mono } from 'next/font/google';
 import { Nav } from '@/src/components/Nav';
 import { Footer } from '@/src/components/Footer';
-import ClickSpark from '@/src/components/ClickSpark';
 import { SITE } from '@/src/data/about';
 import '@/src/theme.css';
 
@@ -41,11 +40,20 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.name,
     type: 'website',
+    images: [
+      {
+        url: '/social-preview.jpg',
+        width: 480,
+        height: 250,
+        alt: 'Edward De Jesus — My Portfolio',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'edwarddjss.me',
     description: SITE.description,
+    images: ['/social-preview.jpg'],
   },
 };
 
@@ -53,11 +61,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${spaceMono.variable}`}>
       <body>
-        <ClickSpark sparkColor="#aab0ff" sparkSize={9} sparkRadius={16} sparkCount={8} duration={420}>
-          <Nav />
-          {children}
-          <Footer />
-        </ClickSpark>
+        <Nav />
+        {children}
+        <Footer />
       </body>
     </html>
   );
