@@ -270,36 +270,6 @@ main {
   isolation: isolate;
   transition: border-color 0.25s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-/* spotlight: dim the rest of the grid when one tile is focused */
-.showcase:hover .tile {
-  opacity: 0.55;
-  transition: opacity 0.3s ease;
-}
-.showcase:hover .tile:hover {
-  opacity: 1;
-}
-.tile:hover {
-  border-color: var(--line-strong);
-  transform: translateY(-4px);
-}
-/* cursor-follow spotlight (ReactBits SpotlightCard) */
-.tile {
-  --mx: 50%;
-  --my: 50%;
-}
-.tile-spot {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0;
-  background: radial-gradient(circle 200px at var(--mx) var(--my), rgba(124, 131, 255, 0.22), transparent 72%);
-  transition: opacity 0.3s ease;
-  mix-blend-mode: screen;
-}
-.tile:hover .tile-spot {
-  opacity: 1;
-}
 .tile-link {
   position: absolute;
   inset: 0;
@@ -320,10 +290,6 @@ main {
   object-fit: cover;
   object-position: top center;
   z-index: 0;
-  transition: filter 0.3s ease;
-}
-.tile:hover .tile-media {
-  filter: brightness(1.04);
 }
 .tile-media[data-fit='contain'] {
   object-fit: contain;
@@ -491,8 +457,5 @@ main {
 @media (max-width: 560px) {
   .showcase {
     grid-template-columns: 1fr;
-  }
-  .showcase:hover .tile {
-    opacity: 1;
   }
 }

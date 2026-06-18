@@ -1,23 +1,11 @@
-'use client';
-
-import type { MouseEventHandler } from 'react';
 import type { Project } from '@/src/data/projects';
 import { GitHubIcon } from '@/src/components/Icons';
-
-// Track the cursor inside each card so a soft accent highlight follows it.
-const handleSpotlight: MouseEventHandler<HTMLElement> = (e) => {
-  const el = e.currentTarget;
-  const rect = el.getBoundingClientRect();
-  el.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-  el.style.setProperty('--my', `${e.clientY - rect.top}px`);
-};
 
 export function ShowcaseGrid({ projects }: { projects: readonly Project[] }) {
   return (
     <div className="showcase">
       {projects.map((p) => (
-        <article key={p.name} className="tile" onMouseMove={handleSpotlight}>
-          <span className="tile-spot" aria-hidden="true" />
+        <article key={p.name} className="tile">
           <a className="tile-link" href={p.href} target="_blank" rel="noreferrer" aria-label={`${p.name}, ${p.tag}`} />
 
           <div className="tile-visual">

@@ -29,17 +29,14 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: {
-    default: `${SITE.name} · ${SITE.role}`,
-    template: `%s · ${SITE.name}`,
-  },
+  title: 'edwarddjss.me',
   description: SITE.description,
   icons: {
-    icon: [{ url: '/me.png', type: 'image/png', sizes: '800x800' }],
-    apple: [{ url: '/me.png', type: 'image/png', sizes: '800x800' }],
+    icon: [{ url: '/favicon.png', type: 'image/png', sizes: '512x512' }],
+    apple: [{ url: '/favicon.png', type: 'image/png', sizes: '512x512' }],
   },
   openGraph: {
-    title: `${SITE.name} · ${SITE.role}`,
+    title: 'edwarddjss.me',
     description: SITE.description,
     url: SITE.url,
     siteName: SITE.name,
@@ -47,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} · ${SITE.role}`,
+    title: 'edwarddjss.me',
     description: SITE.description,
   },
 };
