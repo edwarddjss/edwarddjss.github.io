@@ -320,10 +320,13 @@ main {
   object-fit: cover;
   object-position: top center;
   z-index: 0;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: filter 0.3s ease;
 }
 .tile:hover .tile-media {
-  transform: scale(1.05);
+  filter: brightness(1.04);
+}
+.tile-media[data-fit='contain'] {
+  object-fit: contain;
 }
 .tile-media[data-fit='logo'] {
   object-fit: contain;

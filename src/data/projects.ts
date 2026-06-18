@@ -4,7 +4,7 @@ export type Project = {
   href: string; // primary destination (live app / store / demo)
   tag: string; // product category / kind
   thumb: string; // path under /public
-  fit?: 'cover' | 'logo' | 'banner'; // how the thumbnail sits in its frame; default cover
+  fit?: 'cover' | 'contain' | 'logo' | 'banner'; // how the thumbnail sits in its frame; default cover
   repo?: string; // optional source repo, shown as a small GitHub icon
   stars?: number; // optional, shown as a subtle badge when >= 1
 };
@@ -53,6 +53,7 @@ export const PROJECTS: readonly Project[] = [
     href: 'https://edwarddjss.github.io/greenroom/',
     tag: 'Desktop App',
     thumb: '/thumb/greenroom.png',
+    fit: 'contain',
     repo: 'https://github.com/edwarddjss/greenroom',
   },
   {
