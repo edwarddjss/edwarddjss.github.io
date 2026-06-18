@@ -63,7 +63,6 @@ export const PROJECTS: readonly Project[] = [
     href: 'https://marketplace.visualstudio.com/items?itemName=edwarddjss.headroom',
     tag: 'VS Code',
     thumb: '/thumb/headroom.png',
-    fit: 'banner',
     repo: 'https://github.com/edwarddjss/claude-usage-bar',
   },
 ];

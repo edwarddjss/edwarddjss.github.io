@@ -52,10 +52,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/social-preview.jpg',
-        width: 480,
-        height: 250,
-        alt: 'Edward De Jesus — My Portfolio',
+        url: '/edward-de-jesus-software-engineer-portfolio.png',
+        width: 1731,
+        height: 909,
+        alt: 'Edward De Jesus — Software Engineer Portfolio',
       },
     ],
   },
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'edwarddjss.me',
     description: SITE.description,
-    images: ['/social-preview.jpg'],
+    images: ['/edward-de-jesus-software-engineer-portfolio.png'],
   },
 };
 

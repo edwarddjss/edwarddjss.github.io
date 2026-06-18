@@ -419,7 +419,7 @@ main {
   font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.01em;
-  color: var(--ink-dim);
+  color: var(--ink);
   text-decoration: none;
   transition: color 0.15s ease;
 }
