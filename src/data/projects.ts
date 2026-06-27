@@ -54,23 +54,4 @@ export const PROJECTS: readonly Project[] = [
     fit: 'logo',
     stars: 15,
   },
-  {
-    name: 'greenroom',
-    description:
-      'Self-hosted Windows app that streams your Spotify desktop audio straight into a Discord voice channel.',
-    href: 'https://edwarddjss.github.io/greenroom/',
-    tag: 'Desktop App',
-    thumb: '/thumb/greenroom.png',
-    fit: 'contain',
-    repo: 'https://github.com/edwarddjss/greenroom',
-  },
-  {
-    name: 'Headroom',
-    description:
-      'Live Claude Code and Codex usage in your VS Code / Cursor status bar, from privacy-first local bridge files.',
-    href: 'https://marketplace.visualstudio.com/items?itemName=edwarddjss.headroom',
-    tag: 'VS Code',
-    thumb: '/thumb/headroom.png',
-    repo: 'https://github.com/edwarddjss/claude-usage-bar',
-  },
 ];

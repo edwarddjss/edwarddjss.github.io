@@ -5,11 +5,11 @@ export const SITE = {
   role: 'Software Engineer',
   url: 'https://edwarddjss.me',
   description:
-    'Software engineer building useful apps, developer tools, and AI-native products.',
+    'Software engineer building web apps, browser extensions, and AI-powered tools.',
 } as const;
 
 // About section. Each string is a paragraph.
 export const BIO: readonly string[] = [
-  'Software engineer building useful products across web apps, browser extensions, AI tooling, and developer utilities.',
-  'I focus on shipping simple tools that solve real problems and feel good to use.',
+  'I build and ship practical software: web apps, browser extensions, automation, and AI-powered tools.',
+  'Most of my work starts with a small annoying problem and ends as a product people can actually use.',
 ];
