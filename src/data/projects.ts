@@ -12,6 +12,14 @@ export type Project = {
 // Shipped work, in display order.
 export const PROJECTS: readonly Project[] = [
   {
+    name: 'Ketra',
+    description:
+      'Desktop drops miner for Twitch and Kick. Queue the drops you want, and Ketra watches eligible streams, tracks progress, and claims them the second they unlock.',
+    href: 'https://ketra.app',
+    tag: 'Desktop App',
+    thumb: '/thumb/ketra.png',
+  },
+  {
     name: 'Tryouts',
     description:
       'Video-first creator casting for UGC teams, agencies, and founder-led brands. Post a brief, collect auditions, and review AI-ranked shortlists.',
